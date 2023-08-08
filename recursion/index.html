@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div.node {
+            padding: 5px 5px 0 5px;
+            position: relative;
+        }
+
+        div.node.has-children:before {
+            content: "-";
+            position: absolute;
+            left: -5px;
+            top: 5px;
+            border-radius: 50%;
+        }
+
+        div.node.has-children.closed:before {
+            content: "+";
+            position: absolute;
+            left: -5px;
+            top: 5px;
+            border-radius: 50%;
+        }
+
+        div.node.closed div {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div id="root"></div>
+
+<script src="recurse.js"></script>
+</body>
+</html>
