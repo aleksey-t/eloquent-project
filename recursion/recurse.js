@@ -1,5 +1,5 @@
 /*
- * рекурсивный обход дерева
+ * recursive tree traversal
  */
 
 const tree = {
@@ -71,15 +71,10 @@ function render(node, mountPoint) {
 
 render(tree, document.getElementById("root"));
 
-// открывает/закрывает ветку
+// open/close a branch
 function toggleNode(node) {
     if (node) {
         console.log('toggle')
         node.classList.toggle('closed');
-    }
-}
-
-class Node{
-    constructor() {
     }
 }
